@@ -50,6 +50,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
+
     :root {
       --bg: #1E202C;
       --bg-card: #31323E;
@@ -3551,1325 +3552,1882 @@
 </section>
 
 
-<!-- AI Video Section -->
-<section id="ai-tools" class="content-section">
-  <!-- Breadcrumb for SEO -->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="#">Home</a>
-    <span>›</span>
-    <span>AI Video Tools</span>
+<!-- AI VIDEO SECTION -->
+<section id="ai-tools" class="content-section" aria-labelledby="ai-tools-title">  
+  
+  <!-- Schema.org structured data for AI tools section -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "AI Video Tools and Workflows",
+    "description": "Comprehensive collection of AI-powered video creation tools and professional workflows for content production",
+    "numberOfItems": 15,
+    "itemListElement": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Runway Gen-2",
+        "applicationCategory": "Video Editing",
+        "operatingSystem": "Web Browser"
+      },
+      {
+        "@type": "SoftwareApplication", 
+        "name": "Synthesia",
+        "applicationCategory": "Video Production"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Breadcrumb navigation -->
+  <nav class="breadcrumb" aria-label="Breadcrumb navigation for AI Video section">
+    <a href="#home" aria-label="Navigate to Home">Home</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">AI Video</span>
   </nav>
 
-  <!-- Enhanced Hero Section with Animations -->
-  <div class="hero reveal" style="background: linear-gradient(135deg, rgba(30,32,44,0.95), rgba(49,50,62,0.92)), url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center;">
+  <!-- Hero Section with optimized image -->
+  <div class="hero hero-ai-video" role="banner" aria-labelledby="ai-video-hero-title">
+    <img 
+      src="https://images.unsplash.com/photo-1626379953822-baec19c3accd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      alt="AI-powered video creation technology showing professional video production workflow"
+      class="hero-background-image"
+      loading="eager"
+      width="1600"
+      height="900"
+      fetchpriority="high"
+    >
+    <div class="hero-overlay" aria-hidden="true"></div>
+    
     <div class="hero-content">
-      <div class="premium-badge pulse-animation" style="margin-bottom: 1.5rem;">
-        <span>NEW</span>
-        <span style="color: var(--text-secondary);">2025 AI Video Revolution</span>
-      </div>
-      <h1 class="hero-title animate-typing">Premium AI Video Creation & Monetization</h1>
-      <p class="hero-subtitle fade-in-delay">Transform your creative vision into professional videos without filming, editing experience, or technical skills. Our curated selection of AI video tools empowers creators to produce studio-quality content at unprecedented speed and scalability.</p>
-      
-      <div class="feature-highlights">
-        <div class="feature-item slide-in-left" style="animation-delay: 0.2s">
-          <div class="feature-dot"></div>
-          <span>No Experience Required</span>
-        </div>
-        <div class="feature-item slide-in-left" style="animation-delay: 0.4s">
-          <div class="feature-dot"></div>
-          <span>Studio Quality Results</span>
-        </div>
-        <div class="feature-item slide-in-left" style="animation-delay: 0.6s">
-          <div class="feature-dot"></div>
-          <span>10x Faster Production</span>
-        </div>
+      <div class="premium-badge" role="status" aria-label="Premium content indicator">
+        <span aria-hidden="true">PREMIUM</span>
+        <span>AI Video Creation Suite</span>
       </div>
       
-      <p class="hero-cta fade-in-delay" style="animation-delay: 0.8s">Your journey to becoming a professional video creator starts today - no experience required.</p>
+      <h1 id="ai-video-hero-title" class="hero-title">
+        Transform Ideas Into Stunning Videos
+      </h1>
+      
+      <p class="hero-text">
+        Leverage cutting-edge AI to create professional-quality videos without cameras, actors, or expensive equipment.
+      </p>
+      
+      <ul class="feature-highlights" aria-label="Key features of AI Video tools">
+        <li class="feature-item">
+          <span class="feature-dot" aria-hidden="true"></span>
+          <span>20+ AI Video Tools</span>
+        </li>
+        <li class="feature-item">
+          <span class="feature-dot" aria-hidden="true"></span>
+          <span>Realistic Income Methods</span>
+        </li>
+        <li class="feature-item">
+          <span class="feature-dot" aria-hidden="true"></span>
+          <span>USA & EU Optimized</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section header -->
+  <header class="ai-video-header">
+    <h1 class="ai-video-title">AI Video Tools & Workflows</h1>
+    <p class="ai-video-subtitle">
+      Explore how AI-powered video creation tools work and learn practical workflows for professional video production.
+    </p>
+  </header>
+
+
+<!-- CHANGE: Enhanced accessible tabs with proper roles and keyboard navigation -->
+  <nav class="ai-tabs-wrapper" role="tablist" aria-label="AI Video content categories">
+    <div class="ai-tabs-container">
+      <button 
+        class="ai-tab-btn active" 
+        id="tab-tools"
+        role="tab"
+        aria-selected="true"
+        aria-controls="panel-video-tools"
+        data-target="video-tools"
+        aria-label="View AI video tools"
+        tabindex="0">
+        <span class="tab-icon" aria-hidden="true">🛠️</span>
+        <span class="tab-label">Tools</span>
+        <span class="tooltip" role="tooltip" aria-hidden="true">Browse 15+ AI video tools</span>
+      </button>
+      
+      <button 
+        class="ai-tab-btn" 
+        id="tab-methods"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-video-methods"
+        data-target="video-methods"
+        aria-label="View video production workflows"
+        tabindex="0">
+        <span class="tab-icon" aria-hidden="true">📋</span>
+        <span class="tab-label">Workflows</span>
+        <span class="tooltip" role="tooltip" aria-hidden="true">Learn step-by-step workflows</span>
+      </button>
+      
+      <button 
+        class="ai-tab-btn" 
+        id="tab-showcase"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-video-showcase"
+        data-target="video-showcase"
+        aria-label="View video demonstrations"
+        tabindex="0">
+        <span class="tab-icon" aria-hidden="true">🎬</span>
+        <span class="tab-label">Examples</span>
+        <span class="tooltip" role="tooltip" aria-hidden="true">Watch tool demonstrations</span>
+      </button>
     </div>
     
-    <!-- Animated background elements -->
-    <div class="floating-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-      <div class="shape shape-4"></div>
+    <!-- CHANGE: Enhanced design for Search Tools with modern glassmorphism and improved layout -->
+    <div class="tools-search-container">
+      <label for="tools-search" class="visually-hidden">Search AI video tools</label>
+      <div class="search-wrapper">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input 
+          type="search" 
+          id="tools-search"
+          class="tools-search-input"
+          placeholder="Search tools, categories..."
+          aria-label="Search AI video tools by name or category"
+        >
+        <button 
+          class="search-button" 
+          aria-label="Search tools"
+          aria-controls="video-tools">
+          <span>Search</span>
+        </button>
+      </div>
     </div>
+  </nav>
+
+  <!-- Tab content areas -->
+  <div class="ai-tabs-content">
+    
+    <!-- CHANGE: Added proper role and aria-labelledby -->
+    <div 
+      id="video-tools" 
+      class="tab-pane active" 
+      role="tabpanel"
+      aria-labelledby="tab-tools"
+      tabindex="0">
+      
+      <!-- CHANGE: Collapsible category blocks for better scanning -->
+      <div class="category-block" data-category="text-to-video">
+        <button 
+          class="category-toggle" 
+          aria-expanded="true"
+          aria-controls="category-text-to-video-content">
+          <h3 class="category-title" id="category-text-to-video">
+            Text-to-Video Generation
+          </h3>
+          <span class="toggle-indicator" aria-hidden="true">−</span>
+        </button>
+        
+        <div 
+          id="category-text-to-video-content" 
+          class="category-content"
+          aria-labelledby="category-text-to-video">
+          
+          <div class="tools-grid" role="list" aria-label="Text-to-video generation tools">
+            
+            <!-- Runway Gen-2 Card -->
+            <a 
+              href="https://runwayml.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="tool-card"
+              role="listitem"
+              aria-label="Visit Runway Gen-2 website - Text-to-video generation with motion controls"
+              data-tool-name="Runway Gen-2"
+              data-tool-category="Text-to-Video">
+              <div class="tool-visual">
+                <div class="tool-icon" aria-hidden="true">🎥</div>
+                <button 
+                  class="tool-info-btn" 
+                  aria-label="More information about Runway Gen-2"
+                  aria-describedby="tooltip-runway">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                </button>
+              </div>
+              <div class="tool-content">
+                <h4 class="tool-name">Runway Gen-2</h4>
+                <p class="tool-desc">Advanced text-to-video generation with motion brush controls for precise camera movements and cinematic styles. Supports up to 4K resolution export and includes timeline editing for frame-perfect adjustments.</p>
+                <div class="tool-footer">
+                  <span class="tool-type" aria-label="Category: Generative">Generative</span>
+                  <span class="tool-action" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </a>
+            
+            <!-- Pika Labs Card -->
+            <a 
+              href="https://pika.art" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="tool-card"
+              role="listitem"
+              aria-label="Visit Pika Labs website - Video-to-video animation tools"
+              data-tool-name="Pika Labs"
+              data-tool-category="Text-to-Video">
+              <div class="tool-visual">
+                <div class="tool-icon" aria-hidden="true">🎞️</div>
+              </div>
+              <div class="tool-content">
+                <h4 class="tool-name">Pika Labs</h4>
+                <p class="tool-desc">Specializes in video-to-video animation allowing users to transform existing footage into new styles while maintaining lip-sync accuracy. Includes lip-sync detection tools and style transfer capabilities for consistent brand videos.</p>
+                <div class="tool-footer">
+                  <span class="tool-type" aria-label="Category: Animation">Animation</span>
+                  <span class="tool-action" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </a>
+            
+            <!-- Genmo AI Card -->
+            <a 
+              href="https://www.genmo.ai" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="tool-card"
+              role="listitem"
+              aria-label="Visit Genmo AI website - Creative video generation from text"
+              data-tool-name="Genmo AI"
+              data-tool-category="Text-to-Video">
+              <div class="tool-visual">
+                <div class="tool-icon" aria-hidden="true">🎨</div>
+              </div>
+              <div class="tool-content">
+                <h4 class="tool-name">Genmo AI</h4>
+                <p class="tool-desc">Features a unique chat-based video generation interface where users can iteratively refine prompts and see real-time updates. Supports generating multiple variations simultaneously and allows for seamless text replacement in generated scenes.</p>
+                <div class="tool-footer">
+                  <span class="tool-type" aria-label="Category: Generative">Generative</span>
+                  <span class="tool-action" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- CHANGE: Added 4th Tool - Stable Video Diffusion -->
+            <a 
+              href="https://stability.ai" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="tool-card"
+              role="listitem"
+              aria-label="Visit Stable Video Diffusion website - Open-source video generation model"
+              data-tool-name="Stable Video Diffusion"
+              data-tool-category="Text-to-Video">
+              <div class="tool-visual">
+                <div class="tool-icon" aria-hidden="true">🎲</div>
+              </div>
+              <div class="tool-content">
+                <h4 class="tool-name">Stable Video Diffusion</h4>
+                <p class="tool-desc">Open-source video generation model based on Stable Diffusion architecture optimized for temporal consistency. Generates high-fidelity clips from text prompts with support for various aspect ratios and camera movements through negative prompting.</p>
+                <div class="tool-footer">
+                  <span class="tool-type" aria-label="Category: Generative">Generative</span>
+                  <span class="tool-action" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Avatars Category -->
+      <div class="category-block" data-category="ai-avatars">
+        <button 
+          class="category-toggle" 
+          aria-expanded="true"
+          aria-controls="category-ai-avatars-content">
+          <h3 class="category-title" id="category-ai-avatars">
+            AI Avatars & Presenters
+          </h3>
+          <span class="toggle-indicator" aria-hidden="true">−</span>
+        </button>
+        
+        <div 
+          id="category-ai-avatars-content" 
+          class="category-content"
+          aria-labelledby="category-ai-avatars">
+          
+          <div class="tools-grid" role="list" aria-label="AI avatar and presenter tools">
+            
+            <a 
+              href="https://www.synthesia.io" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="tool-card"
+              role="listitem"
+              aria-label="Visit Synthesia website - AI avatars with synchronized lip movement"
+              data-tool-name="Synthesia"
+              data-tool-category="AI Avatars">
+              <div class="tool-visual">
+                <div class="tool-icon" aria-hidden="true">🧔</div>
+              </div>
+              <div class="tool-content">
+                <h4 class="tool-name">Synthesia</h4>
+                <p class="tool-desc">AI avatars with synchronized lip movement for video presentations. Offers over 140 diverse AI avatars and supports 120+ languages and accents, making it ideal for global corporate training and marketing videos.</p>
+                <div class="tool-footer">
+                  <span class="tool-type" aria-label="Category: Avatar">Avatar</span>
+                  <span class="tool-action" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </a>
+            
+            <a 
+              href="https://www.heygen.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="tool-card"
+              role="listitem"
+              aria-label="Visit HeyGen website - Realistic AI avatars with natural expressions"
+              data-tool-name="HeyGen"
+              data-tool-category="AI Avatars">
+              <div class="tool-visual">
+                <div class="tool-icon" aria-hidden="true">🗣️</div>
+              </div>
+              <div class="tool-content">
+                <h4 class="tool-name">HeyGen</h4>
+                <p class="tool-desc">Realistic AI avatars with natural expressions and gestures. Provides streaming avatars for real-time interactions and supports custom avatar creation from just 2 minutes of video footage for personalized branding.</p>
+                <div class="tool-footer">
+                  <span class="tool-type" aria-label="Category: Avatar">Avatar</span>
+                  <span class="tool-action" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </a>
+            
+            <a 
+              href="https://www.d-id.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="tool-card"
+              role="listitem"
+              aria-label="Visit D-ID website - Create talking head videos from static photos"
+              data-tool-name="D-ID"
+              data-tool-category="AI Avatars">
+              <div class="tool-visual">
+                <div class="tool-icon" aria-hidden="true">👤</div>
+              </div>
+              <div class="tool-content">
+                <h4 class="tool-name">D-ID</h4>
+                <p class="tool-desc">Create talking head videos from static photos with AI animation. Perfect for bringing stock photos to life or creating spokesperson content quickly without hiring actors or setting up a full studio.</p>
+                <div class="tool-footer">
+                  <span class="tool-type" aria-label="Category: Avatar">Avatar</span>
+                  <span class="tool-action" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </a>
+            
+            <a 
+              href="https://www.rephrase.ai" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="tool-card"
+              role="listitem"
+              aria-label="Visit Rephrase AI website - AI-generated presenters for videos"
+              data-tool-name="Rephrase AI"
+              data-tool-category="AI Avatars">
+              <div class="tool-visual">
+                <div class="tool-icon" aria-hidden="true">🎭</div>
+              </div>
+              <div class="tool-content">
+                <h4 class="tool-name">Rephrase AI</h4>
+                <p class="tool-desc">AI-generated presenters for explainer and training videos. Features high-quality lip-sync and gesture support, allowing you to create professional looking content with simple text scripts and brand customization.</p>
+                <div class="tool-footer">
+                  <span class="tool-type" aria-label="Category: Avatar">Avatar</span>
+                  <span class="tool-action" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Editing Category -->
+      <div class="category-block" data-category="video-editing">
+        <button 
+          class="category-toggle" 
+          aria-expanded="true"
+          aria-controls="category-video-editing-content">
+          <h3 class="category-title" id="category-video-editing">
+            Video Editing & Enhancement
+          </h3>
+          <span class="toggle-indicator" aria-hidden="true">−</span>
+        </button>
+        
+        <div 
+          id="category-video-editing-content" 
+          class="category-content"
+          aria-labelledby="category-video-editing">
+          
+          <div class="tools-grid" role="list" aria-label="Video editing and enhancement tools">
+            
+            <a 
+              href="https://www.descript.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="tool-card"
+              role="listitem"
+              aria-label="Visit Descript website - Text-based video editing"
+              data-tool-name="Descript"
+              data-tool-category="Video Editing">
+              <div class="tool-visual">
+                <div class="tool-icon" aria-hidden="true">✂️</div>
+              </div>
+              <div class="tool-content">
+                <h4 class="tool-name">Descript</h4>
+                <p class="tool-desc">Text-based video editing for intuitive content modification. Simply edit the video transcript and the video automatically updates, making video editing as easy as editing a text document with built-in collaboration features.</p>
+                <div class="tool-footer">
+                  <span class="tool-type" aria-label="Category: Editing">Editing</span>
+                  <span class="tool-action" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </a>
+            
+            <a 
+              href="https://www.capcut.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="tool-card"
+              role="listitem"
+              aria-label="Visit CapCut website - AI-powered video editing"
+              data-tool-name="CapCut AI"
+              data-tool-category="Video Editing">
+              <div class="tool-visual">
+                <div class="tool-icon" aria-hidden="true">📱</div>
+              </div>
+              <div class="tool-content">
+                <h4 class="tool-name">CapCut AI</h4>
+                <p class="tool-desc">Video editing with AI-powered effects and enhancements. Includes automatic captions, background removal, and smart cut features designed specifically for social media content creators looking for fast turnarounds.</p>
+                <div class="tool-footer">
+                  <span class="tool-type" aria-label="Category: Editing">Editing</span>
+                  <span class="tool-action" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </a>
+            
+            <a 
+              href="https://www.topazlabs.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="tool-card"
+              role="listitem"
+              aria-label="Visit Topaz Video AI website - Video upscaling and quality enhancement"
+              data-tool-name="Topaz Video AI"
+              data-tool-category="Video Editing">
+              <div class="tool-visual">
+                <div class="tool-icon" aria-hidden="true">🔧</div>
+              </div>
+              <div class="tool-content">
+                <h4 class="tool-name">Topaz Video AI</h4>
+                <p class="tool-desc">Video upscaling and quality enhancement using AI processing. Transforms low-resolution footage into 4K quality while reducing noise, stabilizing video, and performing frame interpolation for smoother motion.</p>
+                <div class="tool-footer">
+                  <span class="tool-type" aria-label="Category: Enhancement">Enhancement</span>
+                  <span class="tool-action" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Automation Category -->
+      <div class="category-block" data-category="content-automation">
+        <button 
+          class="category-toggle" 
+          aria-expanded="true"
+          aria-controls="category-content-automation-content">
+          <h3 class="category-title" id="category-content-automation">
+            Content Automation
+          </h3>
+          <span class="toggle-indicator" aria-hidden="true">−</span>
+        </button>
+        
+        <div 
+          id="category-content-automation-content" 
+          class="category-content"
+          aria-labelledby="category-content-automation">
+          
+          <div class="tools-grid" role="list" aria-label="Content automation tools">
+            
+            <a 
+              href="https://www.invideo.io" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="tool-card"
+              role="listitem"
+              aria-label="Visit InVideo website - Template-based video generation"
+              data-tool-name="InVideo AI"
+              data-tool-category="Content Automation">
+              <div class="tool-visual">
+                <div class="tool-icon" aria-hidden="true">🎥</div>
+              </div>
+              <div class="tool-content">
+                <h4 class="tool-name">InVideo AI</h4>
+                <p class="tool-desc">Template-based video generation from text inputs and scripts. Offers thousands of pre-made templates and an AI script assistant that helps write engaging scripts for marketing and educational videos.</p>
+                <div class="tool-footer">
+                  <span class="tool-type" aria-label="Category: Automation">Automation</span>
+                  <span class="tool-action" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </a>
+            
+            <a 
+              href="https://www.pictory.ai" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="tool-card"
+              role="listitem"
+              aria-label="Visit Pictory AI website - Convert blog posts to video"
+              data-tool-name="Pictory AI"
+              data-tool-category="Content Automation">
+              <div class="tool-visual">
+                <div class="tool-icon" aria-hidden="true">📹</div>
+              </div>
+              <div class="tool-content">
+                <h4 class="tool-name">Pictory AI</h4>
+                <p class="tool-desc">Convert blog posts and articles into video content. Automatically selects relevant stock footage, matches voiceovers, and adds captions to create complete videos from text in minutes.</p>
+                <div class="tool-footer">
+                  <span class="tool-type" aria-label="Category: Automation">Automation</span>
+                  <span class="tool-action" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </a>
+            
+            <a 
+              href="https://www.lumen5.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="tool-card"
+              role="listitem"
+              aria-label="Visit Lumen5 website - Transform articles into video presentations"
+              data-tool-name="Lumen5"
+              data-tool-category="Content Automation">
+              <div class="tool-visual">
+                <div class="tool-icon" aria-hidden="true">💡</div>
+              </div>
+              <div class="tool-content">
+                <h4 class="tool-name">Lumen5</h4>
+                <p class="tool-desc">Transform written articles into engaging video presentations. Automatically generates scenes, selects appropriate imagery, and adds transitions to turn blog posts or whitepapers into compelling video summaries.</p>
+                <div class="tool-footer">
+                  <span class="tool-type" aria-label="Category: Automation">Automation</span>
+                  <span class="tool-action" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- CHANGE: Workflows tab with semantic details/summary -->
+    <div 
+      id="video-methods" 
+      class="tab-pane" 
+      role="tabpanel"
+      aria-labelledby="tab-methods"
+      tabindex="0">
+      
+      <div class="methods-intro">
+        <h2>Video Production Workflows</h2>
+        <p>Practical approaches to incorporating AI tools into video production processes.</p>
+      </div>
+
+      <div class="methods-accordion" role="list" aria-label="Video production workflow tutorials">
+        
+        <!-- CHANGE: Using native details/summary for better accessibility -->
+        <details class="method-item" open data-method="content-creation">
+          <summary class="method-header">
+            <div class="method-info">
+              <span class="method-number" aria-hidden="true">01</span>
+              <h3 class="method-title">Content Creation Automation</h3>
+            </div>
+            <div class="method-tag">Automation</div>
+            <span class="toggle-icon" aria-hidden="true">+</span>
+          </summary>
+          
+          <div class="method-body" role="region" aria-live="polite">
+            <p>This workflow demonstrates how AI tools can assist in creating educational and informational video content for platforms like YouTube.</p>
+            
+            <!-- CHANGE: Collapsible sections for long content -->
+            <details class="collapsible-section">
+              <summary>View Implementation Steps</summary>
+              <div class="implementation-steps" role="list">
+                <h4>Workflow Steps:</h4>
+                <ol>
+                  <li>
+                    <strong>Topic research:</strong> Use AI tools to identify trending topics and search volume data within your chosen niche. Analyze competitor content and search trends to find gaps in the market that your video can fill. This data-driven approach ensures higher potential for organic reach and audience engagement.
+                  </li>
+                  <li>
+                    <strong>Script preparation:</strong> Generate draft scripts using AI writing assistants, then review and edit for accuracy and tone. Break down the script into clear sections with hooks to maintain viewer retention. Use AI to optimize language for SEO and clarity, ensuring the message resonates with your target audience.
+                  </li>
+                  <li>
+                    <strong>Visual content:</strong> Create B-roll footage or illustrations using AI video generation tools. Generate custom visuals that align with your script, including transitions, text overlays, and motion graphics. Ensure visuals are high quality and consistent with your brand identity throughout the video.
+                  </li>
+                  <li>
+                    <strong>Avatar or narration:</strong> Choose between AI-generated avatars or text-to-speech narration based on your content style. If using avatars, select expressions and gestures that match the emotional tone of the video. For narration, select a voice profile that is engaging and easy to understand for your audience.
+                  </li>
+                  <li>
+                    <strong>Assembly and editing:</strong> Combine elements using AI-assisted editing tools for efficient post-production. Use AI to automate repetitive tasks like captioning, cutting, and color grading. Review the assembled video for pacing, flow, and technical quality before publishing.
+                  </li>
+                  <li>
+                    <strong>Optimization:</strong> Use AI tools for caption generation, thumbnail creation, and SEO optimization. Generate multiple thumbnail options and use AI to predict which one will perform best. Create SEO-friendly titles, descriptions, and tags to improve discoverability on video platforms.
+                  </li>
+                </ol>
+              </div>
+            </details>
+            
+            <details class="collapsible-section">
+              <summary>View Required Tools</summary>
+              <div class="required-tools">
+                <h4>Common Tools:</h4>
+                <div class="tool-tags" role="list" aria-label="Recommended tools for content creation automation">
+                  <span>Synthesia</span>
+                  <span>Descript</span>
+                  <span>CapCut</span>
+                  <span>ElevenLabs</span>
+                  <span>ChatGPT</span>
+                </div>
+              </div>
+            </details>
+            
+            <details class="collapsible-section">
+              <summary>View Learning Outcomes</summary>
+              <div class="learning-outcomes">
+                <h4>Learning Outcomes:</h4>
+                <ul role="list">
+                  <li>Understanding AI-assisted content production pipelines</li>
+                  <li>Knowledge of tool combinations for efficient workflows</li>
+                  <li>Skills in AI-generated visual and audio integration</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </details>
+
+        <details class="method-item" data-method="professional-production">
+          <summary class="method-header">
+            <div class="method-info">
+              <span class="method-number" aria-hidden="true">02</span>
+              <h3 class="method-title">Professional Video Production</h3>
+            </div>
+            <div class="method-tag">Corporate</div>
+            <span class="toggle-icon" aria-hidden="true">+</span>
+          </summary>
+          
+          <div class="method-body" role="region" aria-live="polite">
+            <p>This workflow outlines how AI tools can streamline video production for marketing, training, and communication purposes.</p>
+            
+            <details class="collapsible-section">
+              <summary>View Implementation Steps</summary>
+              <div class="implementation-steps" role="list">
+                <h4>Workflow Steps:</h4>
+                <ol>
+                  <li><strong>Project scoping:</strong> Define video objectives, target audience, and key messages with input from stakeholders. Conduct stakeholder interviews and review existing brand materials to ensure alignment. Create a creative brief that outlines the tone, style, and deliverables for the project.</li>
+                  <li><strong>Script development:</strong> Use AI writing tools to create initial drafts, then refine with subject matter expertise. Break down complex information into digestible segments and use storytelling techniques to enhance engagement. Ensure the script aligns with the project objectives and target audience.</li>
+                  <li><strong>Avatar selection:</strong> Choose appropriate AI avatars that align with brand guidelines and content tone. Select avatars that represent the diversity of your target audience and ensure they adhere to brand voice and style guidelines. Customize avatars with branding elements like logos and colors.</li>
+                  <li><strong>Production:</strong> Generate video content using AI avatar platforms with custom branding elements. Use AI to create multiple variations of the video to test different approaches. Incorporate branding elements like intros, outros, and lower thirds seamlessly into the generated content.</li>
+                  <li><strong>Review and revision:</strong> Collect feedback and iterate using AI editing tools for efficient updates. Use AI tools to quickly implement feedback and generate revised versions of the video. Conduct multiple review rounds with stakeholders to ensure the final video meets all requirements.</li>
+                  <li><strong>Delivery formats:</strong> Export in multiple formats suitable for web, social media, and internal use. Optimize the video for different platforms and devices, ensuring it plays smoothly and looks professional across all channels. Consider aspect ratios, file sizes, and compression settings for each platform.</li>
+                </ol>
+              </div>
+            </details>
+            
+            <details class="collapsible-section">
+              <summary>View Required Tools</summary>
+              <div class="required-tools">
+                <h4>Common Tools:</h4>
+                <div class="tool-tags" role="list" aria-label="Recommended tools for professional production">
+                  <span>Synthesia</span>
+                  <span>HeyGen</span>
+                  <span>Descript</span>
+                  <span>Runway Gen-2</span>
+                </div>
+              </div>
+            </details>
+            
+            <details class="collapsible-section">
+              <summary>View Learning Outcomes</summary>
+              <div class="learning-outcomes">
+                <h4>Learning Outcomes:</h4>
+                <ul role="list">
+                  <li>AI-powered business video production processes</li>
+                  <li>Brand consistency with AI-generated content</li>
+                  <li>Efficient revision and update workflows</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </details>
+
+        <details class="method-item" data-method="short-form">
+          <summary class="method-header">
+            <div class="method-info">
+              <span class="method-number" aria-hidden="true">03</span>
+              <h3 class="method-title">Short-Form Video Strategies</h3>
+            </div>
+            <div class="method-tag">Strategy</div>
+            <span class="toggle-icon" aria-hidden="true">+</span>
+          </summary>
+          
+          <div class="method-body" role="region" aria-live="polite">
+            <p>This workflow focuses on creating short-form content for platforms like TikTok, Instagram Reels, and YouTube Shorts using AI assistance.</p>
+            
+            <details class="collapsible-section">
+              <summary>View Implementation Steps</summary>
+              <div class="implementation-steps" role="list">
+                <h4>Workflow Steps:</h4>
+                <ol>
+                  <li><strong>Trend analysis:</strong> Monitor platform trends and popular content formats in your niche. Use AI analytics tools to identify trending hashtags, sounds, and content types. Analyze engagement metrics of successful videos to understand what resonates with the target audience.</li>
+                  <li><strong>Content planning:</strong> Plan content themes and batch production schedules using AI assistance. Use AI to generate content calendars based on trends and audience behavior. Plan for regular posting to maintain visibility and engagement on the platform.</li>
+                  <li><strong>Script generation:</strong> Create concise scripts optimized for short-form engagement. Use AI to write hooks that grab attention within the first few seconds. Structure the script to deliver value quickly and encourage viewers to watch till the end.</li>
+                  <li><strong>Visual production:</strong> Use AI video tools for generating or enhancing visual content. Create eye-catching visuals with AI effects and transitions. Use AI to generate variations of the same concept to test what performs best with your audience.</li>
+                  <li><strong>Audio enhancement:</strong> Apply AI-generated voiceovers or music for consistent audio quality. Use AI to generate voiceovers that match the tone of the video. Select background music from AI-powered libraries that enhances the emotional impact of the content.</li>
+                  <li><strong>Platform optimization:</strong> Format content for each platform's specifications and best practices. Optimize aspect ratios, durations, and caption styles for each platform. Use AI to automatically adjust content for different platform requirements.</li>
+                </ol>
+              </div>
+            </details>
+            
+            <details class="collapsible-section">
+              <summary>View Required Tools</summary>
+              <div class="required-tools">
+                <h4>Common Tools:</h4>
+                <div class="tool-tags" role="list" aria-label="Recommended tools for short-form videos">
+                  <span>CapCut</span>
+                  <span>VEED.io</span>
+                  <span>ElevenLabs</span>
+                  <span>Pika Labs</span>
+                </div>
+              </div>
+            </details>
+            
+            <details class="collapsible-section">
+              <summary>View Learning Outcomes</summary>
+              <div class="learning-outcomes">
+                <h4>Learning Outcomes:</h4>
+                <ul role="list">
+                  <li>Platform-specific short-form content creation</li>
+                  <li>AI-assisted batch production techniques</li>
+                  <li>Understanding short-form engagement patterns</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </details>
+
+        <details class="method-item" data-method="instructional">
+          <summary class="method-header">
+            <div class="method-info">
+              <span class="method-number" aria-hidden="true">04</span>
+              <h3 class="method-title">Instructional Video Development</h3>
+            </div>
+            <div class="method-tag">Instructional</div>
+            <span class="toggle-icon" aria-hidden="true">+</span>
+          </summary>
+          
+          <div class="method-body" role="region" aria-live="polite">
+            <p>This workflow covers using AI tools to develop educational video content for courses, tutorials, and training programs.</p>
+            
+            <details class="collapsible-section">
+              <summary>View Implementation Steps</summary>
+              <div class="implementation-steps" role="list">
+                <h4>Workflow Steps:</h4>
+                <ol>
+                  <li><strong>Curriculum design:</strong> Structure learning objectives and lesson progression with subject matter input. Use AI to generate learning objectives based on industry standards and best practices. Create a detailed curriculum outline that ensures logical progression and covers all necessary topics.</li>
+                  <li><strong>Script creation:</strong> Generate detailed lesson scripts using AI, then enhance with expert knowledge. Use AI to simplify complex topics and create engaging explanations. Incorporate examples and analogies to make difficult concepts easier to understand.</li>
+                  <li><strong>Visual support:</strong> Create diagrams, animations, and supporting visuals using AI generation tools. Use AI to create visual aids that enhance understanding and retention. Generate custom illustrations and animations that align with the lesson content and learning objectives.</li>
+                  <li><strong>Lesson recording:</strong> Use AI avatars or voice synthesis for consistent narration across lessons. Ensure consistent voice and presentation style throughout the course. Use AI to generate multiple language versions of the content to reach a wider audience.</li>
+                  <li><strong>Quality assurance:</strong> Review for accuracy, clarity, and educational effectiveness. Use AI tools to check for factual errors and inconsistencies. Conduct pilot tests with a small group of learners to gather feedback and make necessary improvements.</li>
+                  <li><strong>Supplementary materials:</strong> Generate transcripts, summaries, and study guides using AI assistance. Create comprehensive learning materials that support the video content and enhance the learning experience. Use AI to generate quizzes and assessments to test learner understanding.</li>
+                </ol>
+              </div>
+            </details>
+            
+            <details class="collapsible-section">
+              <summary>View Required Tools</summary>
+              <div class="required-tools">
+                <h4>Common Tools:</h4>
+                <div class="tool-tags" role="list" aria-label="Recommended tools for instructional videos">
+                  <span>Synthesia</span>
+                  <span>Descript</span>
+                  <span>ElevenLabs</span>
+                  <span>ChatGPT</span>
+                  <span>MidJourney</span>
+                </div>
+              </div>
+            </details>
+            
+            <details class="collapsible-section">
+              <summary>View Learning Outcomes</summary>
+              <div class="learning-outcomes">
+                <h4>Learning Outcomes:</h4>
+                <ul role="list">
+                  <li>AI-assisted educational content development</li>
+                  <li>Consistent presentation across course materials</li>
+                  <li>Efficient supplementary content generation</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </details>
+        
+      </div>
+    </div>
+
+    <!-- CHANGE: Video showcase with lazy-loaded iframes -->
+    <div 
+      id="video-showcase" 
+      class="tab-pane" 
+      role="tabpanel"
+      aria-labelledby="tab-showcase"
+      tabindex="0">
+      
+      <div class="showcase-header">
+        <h2>Video Tool Demonstrations</h2>
+        <p>Examples showing AI video tools in practical applications.</p>
+      </div>
+      
+      <div class="video-showcase-grid">
+        
+        <article class="video-showcase-item">
+          <div class="video-wrapper">
+            <!-- CHANGE: Added lazy loading and proper loading attribute -->
+            <iframe 
+              src="https://www.youtube.com/embed/UvBL-du4GWc"
+              title="AI Video Demo 1 - Complete Workflow Example demonstrating end-to-end AI video production process"
+              loading="lazy"
+              allowfullscreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              aria-label="Video demonstration: Complete workflow example">
+            </iframe>
+          </div>
+          <div class="video-meta">
+            <h3>Complete Workflow Example</h3>
+            <p>Demonstration of end-to-end AI video production process.</p>
+            <a href="#video-methods" class="internal-link">
+              Learn the workflow →
+            </a>
+          </div>
+        </article>
+
+        <article class="video-showcase-item">
+          <div class="video-wrapper">
+            <!-- CHANGE: Added lazy loading -->
+            <iframe 
+              src="https://www.youtube.com/embed/MOiDrUsgaug"
+              title="AI Video Demo 2 - Avatar Quality Comparison comparing different AI avatar platforms"
+              loading="lazy"
+              allowfullscreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              aria-label="Video demonstration: Avatar quality comparison">
+            </iframe>
+          </div>
+          <div class="video-meta">
+            <h3>Avatar Quality Comparison</h3>
+            <p>Comparing different AI avatar platforms and outputs.</p>
+            <a href="#video-tools" class="internal-link">
+              Explore avatar tools →
+            </a>
+          </div>
+        </article>
+        
+      </div>
+    </div>
+    
   </div>
 
-<!-- Ezoic Top Content Placeholder -->
-<div 
-  id="ezoic-pub-ad-placeholder-104" 
-  style="
-    width: 100%; 
-    min-height: 280px; 
-    margin: 40px auto; 
-    display: flex; 
-    align-items: center; 
+<style>
+  /* 
+   * AI VIDEO SECTION - OPTIMIZED STYLES
+   * Changes: Reduced animations, improved contrast, accessibility enhancements
+   */
+
+  /* Screen reader only class for accessible hidden text */
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  /* Hero Section Optimization */
+  .hero-ai-video {
+    position: relative;
+    border-radius: var(--radius);
+    padding: 5rem 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+  }
+
+  /* CHANGE: Optimized background image loading */
+  .hero-background-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-ai-video .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(30, 32, 44, 0.92), rgba(49, 50, 62, 0.88));
+    z-index: 1;
+  }
+
+  .hero-ai-video .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-ai-video .hero-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(180deg, var(--text-primary), var(--accent-gold-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(96, 81, 155, 0.2);
+    /* CHANGE: Removed animations for better performance and reduced motion */
+  }
+
+  .hero-ai-video .hero-text {
+    font-size: 1.3rem;
+    color: var(--accent-gold-light);
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-inline: auto;
+    opacity: 0.95;
+    line-height: 1.6;
+    /* CHANGE: Removed fade animation */
+  }
+
+  /* Feature Highlights - Enhanced Accessibility */
+  .feature-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     justify-content: center;
-    transition: all 0.3s ease-in-out;
-  ">
-  <!-- Optional: Loader while Ad loads -->
-  <span style="color: #888; font-size: 14px; text-align: center;">
-    Loading ad...
-  </span>
-</div>
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-  <!-- SEO Rich Content Section -->
-  <div class="seo-intro reveal">
-    <h2 class="text-reveal">AI Video Revolution: Transform Your Content Creation</h2>
-    <p class="fade-in-stagger">AI video tools are revolutionizing digital content creation by enabling anyone to produce professional-quality videos without technical skills or expensive equipment. These powerful platforms use advanced machine learning algorithms to transform text prompts, images, and simple commands into engaging video content perfect for today's digital landscape.</p>
-    <p class="fade-in-stagger">From short-form videos dominating TikTok and Instagram Reels to faceless YouTube channels generating passive income, AI video automation opens up unprecedented opportunities for creators, marketers, and entrepreneurs. These tools streamline the entire production process - from scripting and voiceovers to animation and editing - allowing you to focus on strategy and scaling your digital presence.</p>
-    <div class="seo-keywords">
-      <span class="keyword-tag pop-in" style="animation-delay: 0.1s">AI Video Generation</span>
-      <span class="keyword-tag pop-in" style="animation-delay: 0.2s">Text to Video AI</span>
-      <span class="keyword-tag pop-in" style="animation-delay: 0.3s">AI Video Editing</span>
-      <span class="keyword-tag pop-in" style="animation-delay: 0.4s">Automated Video Creation</span>
-      <span class="keyword-tag pop-in" style="animation-delay: 0.5s">AI Avatar Videos</span>
-      <span class="keyword-tag pop-in" style="animation-delay: 0.6s">Video Monetization</span>
-    </div>
-  </div>
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-primary);
+    /* CHANGE: Removed slide-in animation */
+  }
 
-  <!-- Ezoic Top Content Placeholder -->
-<div 
-  id="ezoic-pub-ad-placeholder-105" 
-  style="
-    width: 100%; 
-    min-height: 280px; 
-    margin: 40px auto; 
-    display: flex; 
-    align-items: center; 
+  .feature-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent-gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  }
+
+  /* CHANGE: Improved focus states for keyboard navigation */
+  .feature-item:focus {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  /* Section Header */
+  .ai-video-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .ai-video-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--accent-gold-light);
+    margin-bottom: 1rem;
+  }
+
+  .ai-video-subtitle {
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  /* Tabs Navigation - Enhanced Accessibility */
+  .ai-tabs-wrapper {
+    position: sticky;
+    top: 70px;
+    z-index: 100;
+    margin-bottom: 2rem;
+    background: rgba(30, 32, 44, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ai-tabs-container {
+    display: flex;
     justify-content: center;
-    transition: all 0.3s ease-in-out;
-  ">
-  <!-- Optional: Loader while Ad loads -->
-  <span style="color: #888; font-size: 14px; text-align: center;">
-    Loading ad...
-  </span>
-</div>
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
 
-  <!-- Navigation Tabs with Hover Animation -->
-  <div class="tab-navigation reveal">
-    <button class="nav-tab active hover-grow" data-tab="tools">AI Video Tools</button>
-    <button class="nav-tab hover-grow" data-tab="methods">Monetization Methods</button>
-    <button class="nav-tab hover-grow" data-tab="video">Video Guide</button>
-  </div>
+  /* CHANGE: Enhanced accessible tab buttons */
+  .ai-tab-btn {
+    position: relative;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+  }
 
-  <!-- Tab Content -->
-  <div class="tab-content">
-    <!-- AI Tools Tab -->
-    <div id="tools" class="tab-pane active">
-      <div class="section-header">
-        <h2 class="text-reveal">Premium AI Video Tools for Content Creation</h2>
-        <p class="fade-in-delay">Professional AI video platforms that transform your creative vision into stunning visual content for YouTube, TikTok, Instagram, and business marketing</p>
-      </div>
+  .ai-tab-btn:hover,
+  .ai-tab-btn:focus-visible {
+    background: rgba(96, 81, 155, 0.15);
+    color: var(--text-primary);
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+  }
 
-      <!-- Category Filters -->
-      <div class="category-filters">
-        <button class="category-filter active hover-bounce" data-category="all">All Tools</button>
-        <button class="category-filter hover-bounce" data-category="generation">Video Generation</button>
-        <button class="category-filter hover-bounce" data-category="avatar">AI Avatars</button>
-        <button class="category-filter hover-bounce" data-category="animation">Animation</button>
-      </div>
+  .ai-tab-btn.active {
+    background: linear-gradient(135deg, var(--accent-deep), var(--accent-gold));
+    color: white;
+    box-shadow: 0 4px 15px rgba(96, 81, 155, 0.3);
+  }
 
-      <!-- Tools Grid -->
-      <div class="tools-grid">
-        <!-- Runway ML -->
-        <div class="tool-card reveal hover-lift" data-category="generation">
-          <div class="tool-header">
-            <div class="tool-icon pulse-glow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polygon points="23 7 16 12 23 17 23 7"></polygon>
-                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-              </svg>
-            </div>
-            <h3>Runway ML</h3>
-            <span class="tool-category">Video Generation</span>
-          </div>
-          <div class="tool-description">
-            Runway ML is an advanced AI video creation platform that allows creators to generate, edit, and enhance cinematic-quality videos using text prompts, Gen-2 models, and powerful real-time tools. Perfect for short-form content, ads, storytelling, and visual effects.
-          </div>
-          <div class="tool-features">
-            <span class="feature-tag pop-in" style="animation-delay: 0.1s">High-quality generation</span>
-            <span class="feature-tag pop-in" style="animation-delay: 0.2s">Fast editing workflow</span>
-            <span class="feature-tag pop-in" style="animation-delay: 0.3s">Professional effects</span>
-          </div>
-          <a href="https://runwayml.com" target="_blank" class="tool-link hover-slide">Visit Site →</a>
-        </div>
+  .ai-tab-btn:focus-visible {
+    outline-offset: 4px;
+  }
 
-        <!-- Pika Labs -->
-        <div class="tool-card reveal hover-lift" data-category="generation">
-          <div class="tool-header">
-            <div class="tool-icon pulse-glow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-              </svg>
-            </div>
-            <h3>Pika Labs</h3>
-            <span class="tool-category">Video Generation</span>
-          </div>
-          <div class="tool-description">
-            Pika Labs is a next-generation AI video generator designed for creators who want smooth animations, character consistency, and fast text-to-video results. Perfect for TikTok, YouTube Shorts, and promotional videos.
-          </div>
-          <div class="tool-features">
-            <span class="feature-tag pop-in" style="animation-delay: 0.1s">Smooth motion</span>
-            <span class="feature-tag pop-in" style="animation-delay: 0.2s">Character consistency</span>
-            <span class="feature-tag pop-in" style="animation-delay: 0.3s">Fast rendering</span>
-          </div>
-          <a href="https://pika.art" target="_blank" class="tool-link hover-slide">Visit Site →</a>
-        </div>
+  /* CHANGE: Tooltips for accessibility */
+  .tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+  }
 
-        <!-- HeyGen -->
-        <div class="tool-card reveal hover-lift" data-category="avatar">
-          <div class="tool-header">
-            <div class="tool-icon pulse-glow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <circle cx="12" cy="10" r="3"></circle>
-                <path d="M12 21a9 9 0 0 1-9-9 9 9 0 0 1 9-9 9 9 0 0 1 9 9 9 9 0 0 1-9 9z"></path>
-              </svg>
-            </div>
-            <h3>HeyGen</h3>
-            <span class="tool-category">AI Avatars</span>
-          </div>
-          <div class="tool-description">
-            HeyGen is a leading AI avatar and video automation tool that turns scripts into talking-avatar videos with extremely realistic lip-sync. Ideal for business tutorials, sales videos, and multilingual content.
-          </div>
-          <div class="tool-features">
-            <span class="feature-tag pop-in" style="animation-delay: 0.1s">Realistic avatars</span>
-            <span class="feature-tag pop-in" style="animation-delay: 0.2s">40+ languages</span>
-            <span class="feature-tag pop-in" style="animation-delay: 0.3s">Business focus</span>
-          </div>
-          <a href="https://heygen.com" target="_blank" class="tool-link hover-slide">Visit Site →</a>
-        </div>
+  .ai-tab-btn:focus .tooltip,
+  .ai-tab-btn:hover .tooltip {
+    opacity: 1;
+  }
 
-        <!-- Synthesia -->
-        <div class="tool-card reveal hover-lift" data-category="avatar">
-          <div class="tool-header">
-            <div class="tool-icon pulse-glow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <h3>Synthesia</h3>
-            <span class="tool-category">AI Avatars</span>
-          </div>
-          <div class="tool-description">
-            Synthesia is a powerful AI video production tool that replaces traditional filming with studio-quality AI avatars, automatic subtitles, and multilingual narration. Great for courses, training, onboarding, and corporate videos.
-          </div>
-          <div class="tool-features">
-            <span class="feature-tag pop-in" style="animation-delay: 0.1s">Corporate avatars</span>
-            <span class="feature-tag pop-in" style="animation-delay: 0.2s">Auto-subtitles</span>
-            <span class="feature-tag pop-in" style="animation-delay: 0.3s">Enterprise quality</span>
-          </div>
-          <a href="https://synthesia.io" target="_blank" class="tool-link hover-slide">Visit Site →</a>
-        </div>
+  .tab-icon {
+    font-size: 1.1rem;
+  }
 
-        <!-- Kaiber AI -->
-        <div class="tool-card reveal hover-lift" data-category="animation">
-          <div class="tool-header">
-            <div class="tool-icon pulse-glow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
-                <line x1="12" y1="22" x2="12" y2="15.5"></line>
-                <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
-                <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
-                <line x1="12" y1="2" x2="12" y2="8.5"></line>
-              </svg>
-            </div>
-            <h3>Kaiber AI</h3>
-            <span class="tool-category">Animation</span>
-          </div>
-          <div class="tool-description">
-            Kaiber AI is a creative AI video generator that transforms images, ideas, or music into stylized cinematic videos. Popular among artists, musicians, and content creators looking for unique animated visuals.
-          </div>
-          <div class="tool-features">
-            <span class="feature-tag pop-in" style="animation-delay: 0.1s">Artistic outputs</span>
-            <span class="feature-tag pop-in" style="animation-delay: 0.2s">Music visualization</span>
-            <span class="feature-tag pop-in" style="animation-delay: 0.3s">Creative storytelling</span>
-          </div>
-          <a href="https://kaiber.ai" target="_blank" class="tool-link hover-slide">Visit Site →</a>
-        </div>
+  /* Search Container */
+  .tools-search-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(96, 81, 155, 0.05);
+    border-radius: var(--radius-sm);
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  
+  /* CHANGE: New search wrapper for icon styling */
+  .search-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(30, 32, 44, 0.8);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0 0.75rem;
+    flex: 1;
+    transition: border-color 0.3s ease;
+  }
 
-        <!-- Viggle AI -->
-        <div class="tool-card reveal hover-lift" data-category="animation">
-          <div class="tool-header">
-            <div class="tool-icon pulse-glow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-              </svg>
-            </div>
-            <h3>Viggle AI</h3>
-            <span class="tool-category">Animation</span>
-          </div>
-          <div class="tool-description">
-            Viggle AI is a motion-control and character-animation tool powered by Sora-style AI technology for dynamic short-form videos. Perfect for TikTok, meme videos, and character animation.
-          </div>
-          <div class="tool-features">
-            <span class="feature-tag pop-in" style="animation-delay: 0.1s">Motion tracking</span>
-            <span class="feature-tag pop-in" style="animation-delay: 0.2s">Character animation</span>
-            <span class="feature-tag pop-in" style="animation-delay: 0.3s">TikTok optimized</span>
-          </div>
-          <a href="https://viggle.ai" target="_blank" class="tool-link hover-slide">Visit Site →</a>
-        </div>
-      </div>
-    </div>
+  .search-wrapper:focus-within {
+    border-color: var(--accent-deep);
+  }
 
-    <!-- Monetization Methods Tab -->
-    <div id="methods" class="tab-pane">
-      <div class="section-header">
-        <h2 class="text-reveal">AI Video Monetization Methods</h2>
-        <p class="fade-in-delay">Proven strategies to generate income using AI video tools in USA and European markets. Scale your content creation business with these profitable approaches.</p>
-      </div>
+  .search-icon {
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+  }
+  
+  .search-wrapper:focus-within .search-icon {
+    color: var(--accent-gold);
+  }
 
-      <div class="methods-grid">
-        <!-- Short-form AI Videos -->
-        <div class="method-card reveal hover-lift">
-          <div class="method-header">
-            <h3>Short-form AI Videos</h3>
-            <div class="profit-badge pulse-animation">$2,000–$15,000 it can be earned</div>
-          </div>
-          <div class="method-description">
-            Short-form AI videos are one of the fastest-growing online income methods in the US and Europe. Creators produce high-quality AI-generated videos for platforms like TikTok, YouTube Shorts, and Instagram Reels. The demand for fast, visually appealing content makes this method highly profitable for niches such as motivation, finance, storytelling, and product showcases.
-          </div>
-          <div class="method-tools">
-            <strong>Best Tools:</strong> Runway ML, Pika Labs, Kaiber AI
-          </div>
-          <div class="method-advantages">
-            <div class="advantage-item">
-              <span class="advantage-dot bounce-dot"></span>
-              <span>Very high demand in USA/EU markets</span>
-            </div>
-            <div class="advantage-item">
-              <span class="advantage-dot bounce-dot"></span>
-              <span>Fast production workflow</span>
-            </div>
-            <div class="advantage-item">
-              <span class="advantage-dot bounce-dot"></span>
-              <span>Great for viral growth and sponsorships</span>
-            </div>
-          </div>
-        </div>
+  .tools-search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+  }
 
-        <!-- AI Video Automation -->
-        <div class="method-card reveal hover-lift">
-          <div class="method-header">
-            <h3>AI Video Automation</h3>
-            <div class="profit-badge pulse-animation">$3,000–$20,000 it can be earned</div>
-          </div>
-          <div class="method-description">
-            AI video automation allows creators and businesses to scale content production using automated workflows. This includes generating daily videos for clients, social media agencies, or e-commerce brands without manual editing. AI streamlines scripting, voiceovers, video generation, and publishing, making it ideal for agencies in Western markets.
-          </div>
-          <div class="method-tools">
-            <strong>Best Tools:</strong> HeyGen, Synthesia, Runway ML
-          </div>
-          <div class="method-advantages">
-            <div class="advantage-item">
-              <span class="advantage-dot bounce-dot"></span>
-              <span>Perfect for agencies serving US/EU clients</span>
-            </div>
-            <div class="advantage-item">
-              <span class="advantage-dot bounce-dot"></span>
-              <span>Extremely scalable with automation</span>
-            </div>
-            <div class="advantage-item">
-              <span class="advantage-dot bounce-dot"></span>
-              <span>High monthly recurring revenue</span>
-            </div>
-          </div>
-        </div>
+  .tools-search-input::placeholder {
+    color: var(--text-muted);
+  }
 
-        <!-- Faceless YouTube Channels -->
-        <div class="method-card reveal hover-lift">
-          <div class="method-header">
-            <h3>Faceless YouTube Channels</h3>
-            <div class="profit-badge pulse-animation">$1,500–$30,000 it can be earned</div>
-          </div>
-          <div class="method-description">
-            Faceless AI-powered YouTube channels use AI video tools to create engaging content without showing your face. Popular in US/EU niches like finance, tech, history, and storytelling. This model is stable, long-term, and can generate passive income through ads, affiliate marketing, and digital products.
-          </div>
-          <div class="method-tools">
-            <strong>Best Tools:</strong> Synthesia, HeyGen, Viggle AI
-          </div>
-          <div class="method-advantages">
-            <div class="advantage-item">
-              <span class="advantage-dot bounce-dot"></span>
-              <span>No need to appear on camera</span>
-            </div>
-            <div class="advantage-item">
-              <span class="advantage-dot bounce-dot"></span>
-              <span>Multiple monetization options</span>
-            </div>
-            <div class="advantage-item">
-              <span class="advantage-dot bounce-dot"></span>
-              <span>Works exceptionally well in Europe & US audiences</span>
-            </div>
-          </div>
-        </div>
+  .tools-search-input:focus {
+    outline: none;
+  }
 
-        <!-- Templates Marketplace -->
-        <div class="method-card reveal hover-lift">
-          <div class="method-header">
-            <h3>Templates Marketplace</h3>
-            <div class="profit-badge pulse-animation">$1,000–$12,000 it can be earned</div>
-          </div>
-          <div class="method-description">
-            Selling AI video templates on platforms like Etsy, Envato, Gumroad, and Creative Market is a booming digital opportunity in Western markets. Creators design ready-made templates for intros, stories, ads, reels, and YouTube automation. AI tools help produce cinematic templates quickly, making this a high-margin digital business.
-          </div>
-          <div class="method-tools">
-            <strong>Best Tools:</strong> Runway ML, Kaiber AI, Pika Labs
-          </div>
-          <div class="method-advantages">
-            <div class="advantage-item">
-              <span class="advantage-dot bounce-dot"></span>
-              <span>High passive income potential</span>
-            </div>
-            <div class="advantage-item">
-              <span class="advantage-dot bounce-dot"></span>
-              <span>No client work needed</span>
-            </div>
-            <div class="advantage-item">
-              <span class="advantage-dot bounce-dot"></span>
-              <span>Strong demand from creators in USA/EU</span>
-            </div>
-          </div>
-        </div>
+  .search-button {
+    background: var(--accent-deep);
+    border: none;
+    color: white;
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
 
-        <!-- Content Repurposing -->
-        <div class="method-card reveal hover-lift">
-          <div class="method-header">
-            <h3>Content Repurposing (AI)</h3>
-            <div class="profit-badge pulse-animation">$4,000–$18,000 it can be earned</div>
-          </div>
-          <div class="method-description">
-            AI repurposing transforms long-form content (podcasts, webinars, interviews) into short, viral clips. Huge demand from US/EU businesses, coaches, influencers, and SaaS brands. Agencies charge premium rates for this service, using AI tools to cut, edit, caption, and enhance videos rapidly.
-          </div>
-          <div class="method-tools">
-            <strong>Best Tools:</strong> Runway ML, Pika Labs, HeyGen
-          </div>
-          <div class="method-advantages">
-            <div class="advantage-item">
-              <span class="advantage-dot bounce-dot"></span>
-              <span>Very high-paying clients in Western markets</span>
-            </div>
-            <div class="advantage-item">
-              <span class="advantage-dot bounce-dot"></span>
-              <span>Fast workflow thanks to AI automation</span>
-            </div>
-            <div class="advantage-item">
-              <span class="advantage-dot bounce-dot"></span>
-              <span>Works for multiple industries (coaches, podcasts, brands)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  .search-button:hover,
+  .search-button:focus-visible {
+    background: var(--accent-deep-light);
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+  }
 
-    <!-- Video Guide Tab -->
-    <div id="video" class="tab-pane">
-      <div class="section-header">
-        <h2 class="text-reveal">AI Video Monetization Explained</h2>
-        <p class="fade-in-delay">Watch this comprehensive guide to understand how AI video tools can transform your content creation and income potential in today's digital landscape.</p>
-      </div>
+  /* Category Blocks - Collapsible */
+  .category-block {
+    margin-bottom: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+  }
 
-      <div class="video-container reveal">
-        <div class="video-wrapper">
-          <iframe 
-            src="https://archive.org/embed/AI-video-tutorial" 
-            allowfullscreen
-            title="AI Video Monetization Guide - Learn how to make money with AI video tools">
-          </iframe>
-        </div>
-      </div>
+  .category-block:hover {
+    border-color: rgba(96, 81, 155, 0.5);
+  }
 
-      <!-- Motivational Conclusion -->
-      <div class="conclusion-card reveal hover-glow">
-        <h3 class="text-reveal">Your AI Video Journey Starts Now</h3>
-        <p class="fade-in-stagger">The future of content creation is here, and it's powered by artificial intelligence. Whether you want to build a personal brand, start a freelance business, or generate passive income, AI video tools provide the competitive edge you need. Join thousands of creators across the USA and Europe leveraging these technologies to produce professional content faster and more efficiently than ever. Your AI video success starts today—explore these tools and unlock your creative potential.</p>
-        <div class="conclusion-actions">
-        </div>
-      </div>
-    </div>
-  </div>
+  /* CHANGE: Accessible category toggle */
+  .category-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: rgba(96, 81, 155, 0.05);
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: left;
+  }
 
-  <!-- Ezoic Top Content Placeholder -->
-<div 
-  id="ezoic-pub-ad-placeholder-106" 
-  style="
-    width: 100%; 
-    min-height: 280px; 
-    margin: 40px auto; 
-    display: flex; 
-    align-items: center; 
+  .category-toggle:hover,
+  .category-toggle:focus-visible {
+    background: rgba(96, 81, 155, 0.1);
+    outline: 2px solid var(--accent-gold);
+    outline-offset: -2px;
+  }
+
+  .category-title {
+    font-size: 1.5rem;
+    color: var(--accent-gold-light);
+    font-family: "Playfair Display", serif;
+    margin: 0;
+  }
+
+  .toggle-indicator {
+    font-size: 1.5rem;
+    color: var(--accent-deep);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+
+  .category-toggle[aria-expanded="false"] .toggle-indicator {
+    transform: rotate(180deg);
+  }
+
+  .category-content {
+    padding: 1.5rem 0;
+  }
+
+  .category-content[hidden] {
+    display: none;
+  }
+
+  /* Tools Grid */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  /* Tool Cards - Enhanced Accessibility */
+  .tool-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .tool-card:hover,
+  .tool-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: var(--accent-deep);
+  }
+
+  /* CHANGE: Clear focus indicator for keyboard users */
+  .tool-card:focus-visible {
+    outline: 3px solid var(--accent-gold);
+    outline-offset: 2px;
+    z-index: 1;
+  }
+
+  .tool-visual {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .tool-icon {
+    font-size: 2rem;
+    background: rgba(96, 81, 155, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    transition: all 0.3s ease-in-out;
-  ">
-  <!-- Optional: Loader while Ad loads -->
-  <span style="color: #888; font-size: 14px; text-align: center;">
-    Loading ad...
-  </span>
-</div>
+    border-radius: 12px;
+    color: var(--accent-gold-light);
+  }
 
-  <style>
-    /* Enhanced Hero Styles */
-    .premium-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      background: rgba(96, 81, 155, 0.15);
-      padding: 0.5rem 1.5rem;
-      border-radius: 30px;
-      border: 1px solid rgba(96, 81, 155, 0.3);
+  /* CHANGE: Tool info button with tooltip */
+  .tool-info-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-secondary);
+  }
+
+  .tool-info-btn:hover,
+  .tool-info-btn:focus-visible {
+    background: var(--accent-deep);
+    color: white;
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+  }
+
+  .tool-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tool-name {
+    color: var(--text-primary);
+    font-family: "Playfair Display", serif;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .tool-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+
+  .tool-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(96, 81, 155, 0.1);
+  }
+
+  .tool-type {
+    color: var(--accent-deep);
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: rgba(96, 81, 155, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+  }
+
+  .tool-action {
+    color: var(--accent-deep);
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  /* Methods Accordion - Enhanced Accessibility */
+  .methods-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .methods-intro h2 {
+    font-family: "Playfair Display", serif;
+    color: var(--accent-gold-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .methods-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+  }
+
+  .method-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+  }
+
+  .method-item[open] {
+    border-color: var(--accent-deep);
+  }
+
+  /* CHANGE: Enhanced accessible summary */
+  .method-header {
+    cursor: pointer;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(96, 81, 155, 0.02);
+    transition: background 0.3s ease;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+  }
+
+  .method-header:hover,
+  .method-header:focus-visible {
+    background: rgba(96, 81, 155, 0.05);
+    outline: 2px solid var(--accent-gold);
+    outline-offset: -2px;
+  }
+
+  /* CHANGE: Remove default marker for accessibility */
+  .method-item > summary {
+    list-style: none;
+  }
+
+  .method-item > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .method-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .method-number {
+    font-family: "Cinzel", serif;
+    font-size: 1.5rem;
+    color: rgba(96, 81, 155, 0.3);
+    font-weight: 700;
+  }
+
+  .method-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  .method-tag {
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--accent-gold);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .toggle-icon {
+    font-size: 1.5rem;
+    color: var(--accent-deep);
+    transition: transform 0.3s ease;
+  }
+
+  .method-item[open] .toggle-icon {
+    transform: rotate(45deg);
+  }
+
+  .method-body {
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  /* CHANGE: Collapsible sections for long content */
+  .collapsible-section {
+    margin-top: 1.5rem;
+    background: rgba(96, 81, 155, 0.02);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .collapsible-section > summary {
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    color: var(--accent-deep);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+  }
+
+  .collapsible-section > summary:hover,
+  .collapsible-section > summary:focus-visible {
+    background: rgba(96, 81, 155, 0.05);
+    outline: 2px solid var(--accent-gold);
+    outline-offset: -2px;
+  }
+
+  .collapsible-section > summary::before {
+    content: "▸";
+    transition: transform 0.3s ease;
+    margin-right: 0.5rem;
+  }
+
+  .collapsible-section[open] > summary::before {
+    transform: rotate(90deg);
+  }
+
+  .collapsible-section > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .implementation-steps,
+  .required-tools,
+  .learning-outcomes {
+    padding: 1rem 1.5rem;
+  }
+
+  .implementation-steps h4,
+  .required-tools h4,
+  .learning-outcomes h4 {
+    color: var(--accent-gold-light);
+    font-family: "Playfair Display", serif;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .implementation-steps ol,
+  .learning-outcomes ul {
+    padding-left: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .implementation-steps li,
+  .learning-outcomes li {
+    margin-bottom: 0.8rem;
+  }
+
+  .implementation-steps strong {
+    color: var(--accent-gold-light);
+  }
+
+  .tool-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .tool-tags span {
+    background: rgba(96, 81, 155, 0.1);
+    color: var(--accent-deep);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(96, 81, 155, 0.2);
+  }
+
+  /* Video Showcase - Lazy Loading */
+  .showcase-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .video-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .video-showcase-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .video-showcase-item:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow);
+  }
+
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    background: #000;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .video-meta {
+    padding: 1.5rem;
+  }
+
+  .video-meta h3 {
+    font-family: "Playfair Display", serif;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .video-meta p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+
+  /* CHANGE: Internal links for discoverability */
+  .internal-link {
+    color: var(--accent-deep);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+  .internal-link:hover,
+  .internal-link:focus-visible {
+    color: var(--accent-gold);
+    text-decoration: underline;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-ai-video {
+      padding: 3rem 1.5rem;
     }
 
-    .feature-highlights {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0;
-      flex-wrap: wrap;
+    .ai-tabs-wrapper {
+      width: 95%;
+      top: 65px;
+      padding: 0.5rem;
     }
 
-    .feature-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .feature-dot {
-      width: 12px;
-      height: 12px;
-      background: var(--accent-deep);
-      border-radius: 50%;
-    }
-
-    .hero-cta {
-      color: var(--accent-gold-light);
-      font-weight: 600;
-      font-style: italic;
-      margin-top: 2rem;
-      font-size: 1.1rem;
-      text-align: center;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Animation Classes */
-    .pulse-animation {
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(96, 81, 155, 0.4);
-      }
-      70% {
-        box-shadow: 0 0 0 10px rgba(96, 81, 155, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(96, 81, 155, 0);
-      }
-    }
-
-    .animate-typing {
-      overflow: hidden;
-      border-right: 2px solid var(--accent-gold-light);
-      white-space: nowrap;
-      margin: 0 auto;
-      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: var(--accent-gold-light); }
-    }
-
-    .fade-in-delay {
-      opacity: 0;
-      animation: fadeIn 1s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-
-    .slide-in-left {
-      opacity: 0;
-      transform: translateX(-30px);
-      animation: slideInLeft 0.8s ease forwards;
-    }
-
-    @keyframes slideInLeft {
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    .bounce-in {
-      opacity: 0;
-      animation: bounceIn 1s ease forwards;
-    }
-
-    @keyframes bounceIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.3);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1.05);
-      }
-      70% {
-        transform: scale(0.9);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    .text-reveal {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .text-reveal::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--bg-card);
-      animation: textReveal 1.5s ease forwards;
-    }
-
-    @keyframes textReveal {
-      to {
-        left: 100%;
-      }
-    }
-
-    .fade-in-stagger {
-      opacity: 0;
-      animation: fadeIn 0.8s ease forwards;
-    }
-
-    .pop-in {
-      opacity: 0;
-      transform: scale(0.8);
-      animation: popIn 0.5s ease forwards;
-    }
-
-    @keyframes popIn {
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    .hover-grow {
-      transition: transform 0.3s ease;
-    }
-
-    .hover-grow:hover {
-      transform: scale(1.05);
-    }
-
-    .hover-bounce {
-      transition: transform 0.3s ease;
-    }
-
-    .hover-bounce:hover {
-      transform: translateY(-5px);
-    }
-
-    .hover-lift {
-      transition: all 0.3s ease;
-    }
-
-    .hover-lift:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    .pulse-glow {
-      animation: pulseGlow 3s infinite;
-    }
-
-    @keyframes pulseGlow {
-      0%, 100% {
-        box-shadow: 0 0 5px rgba(96, 81, 155, 0.5);
-      }
-      50% {
-        box-shadow: 0 0 20px rgba(96, 81, 155, 0.8);
-      }
-    }
-
-    .hover-slide {
-      transition: all 0.3s ease;
-    }
-
-    .hover-slide:hover {
-      padding-right: 1.5rem;
-    }
-
-    .bounce-dot {
-      animation: bounceDot 2s infinite;
-    }
-
-    @keyframes bounceDot {
-      0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-      }
-      40% {
-        transform: translateY(-5px);
-      }
-      60% {
-        transform: translateY(-3px);
-      }
-    }
-
-    .hover-pulse {
-      transition: all 0.3s ease;
-    }
-
-    .hover-pulse:hover {
-      animation: pulse 1s;
-    }
-
-    .hover-glow {
-      transition: all 0.3s ease;
-    }
-
-    .hover-glow:hover {
-      box-shadow: 0 0 20px rgba(96, 81, 155, 0.5);
-    }
-
-    /* Floating Shapes Animation */
-    .floating-shapes {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    .shape {
-      position: absolute;
-      opacity: 0.1;
-      background: var(--accent-deep);
-      border-radius: 50%;
-    }
-
-    .shape-1 {
-      width: 80px;
-      height: 80px;
-      top: 10%;
-      left: 10%;
-      animation: float 15s infinite linear;
-    }
-
-    .shape-2 {
-      width: 120px;
-      height: 120px;
-      top: 60%;
-      left: 80%;
-      animation: float 20s infinite linear reverse;
-    }
-
-    .shape-3 {
-      width: 60px;
-      height: 60px;
-      top: 80%;
-      left: 20%;
-      animation: float 12s infinite linear;
-    }
-
-    .shape-4 {
-      width: 100px;
-      height: 100px;
-      top: 30%;
-      left: 70%;
-      animation: float 18s infinite linear reverse;
-    }
-
-    @keyframes float {
-      0% {
-        transform: translate(0, 0) rotate(0deg);
-      }
-      25% {
-        transform: translate(20px, 20px) rotate(90deg);
-      }
-      50% {
-        transform: translate(0, 40px) rotate(180deg);
-      }
-      75% {
-        transform: translate(-20px, 20px) rotate(270deg);
-      }
-      100% {
-        transform: translate(0, 0) rotate(360deg);
-      }
-    }
-
-    /* SEO Intro Section */
-    .seo-intro {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius);
-      padding: 2.5rem;
-      margin-bottom: 3rem;
-      box-shadow: var(--shadow);
-    }
-
-    .seo-intro h2 {
-      color: var(--accent-gold-light);
-      margin-bottom: 1.5rem;
-      font-family: "Playfair Display", serif;
-      text-align: center;
-    }
-
-    .seo-intro p {
-      color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-      text-align: justify;
-    }
-
-    .seo-keywords {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 2rem;
-    }
-
-    .keyword-tag {
-      background: rgba(96, 81, 155, 0.1);
-      color: var(--accent-deep);
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
+    .ai-tab-btn {
+      padding: 0.6rem 1rem;
       font-size: 0.85rem;
-      font-weight: 600;
-      border: 1px solid rgba(96, 81, 155, 0.2);
     }
 
-    /* Tab Navigation */
-    .tab-navigation {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
+    .tools-search-container {
+      flex-direction: column;
+      max-width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+    }
+  
+    .search-wrapper {
+      width: 100%;
     }
 
-    .nav-tab {
-      background: rgba(96, 81, 155, 0.1);
-      border: 1px solid var(--border-color);
-      color: var(--text-secondary);
-      padding: 0.8rem 1.5rem;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all var(--dur-fast) var(--easing);
-      font-family: inherit;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .nav-tab:hover {
-      background: rgba(96, 81, 155, 0.2);
-      transform: translateY(-2px);
-    }
-
-    .nav-tab.active {
-      background: rgba(96, 81, 155, 0.25);
-      color: var(--accent-gold-light);
-      border-color: var(--accent-deep);
-      box-shadow: 0 4px 12px rgba(96, 81, 155, 0.2);
-    }
-
-    .tab-pane {
-      display: none;
-    }
-
-    .tab-pane.active {
-      display: block;
-      animation: fadeInUp 0.5s ease;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Section Headers */
-    .section-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .section-header h2 {
-      color: var(--accent-gold-light);
-      margin-bottom: 1rem;
-      font-family: "Playfair Display", serif;
-    }
-
-    .section-header p {
-      color: var(--text-secondary);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* Category Filters */
-    .category-filters {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .category-filter {
-      background: rgba(96, 81, 155, 0.05);
-      border: 1px solid var(--border-color);
-      color: var(--text-secondary);
-      padding: 0.6rem 1.2rem;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: all var(--dur-fast) var(--easing);
-      font-family: inherit;
-      font-size: 0.85rem;
-    }
-
-    .category-filter:hover {
-      background: rgba(96, 81, 155, 0.1);
-    }
-
-    .category-filter.active {
-      background: rgba(96, 81, 155, 0.15);
-      color: var(--accent-gold-light);
-      border-color: var(--accent-deep);
-    }
-
-    /* Tools Grid */
     .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-    }
-
-    .tool-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      transition: all var(--dur-med) var(--easing);
-      position: relative;
-    }
-
-    .tool-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-      border-color: var(--accent-deep);
-    }
-
-    .tool-header {
-      display: flex;
-      align-items: center;
+      grid-template-columns: 1fr;
       gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .tool-icon {
-      width: 44px;
-      height: 44px;
-      background: rgba(96, 81, 155, 0.1);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-deep);
-      flex-shrink: 0;
-    }
-
-    .tool-header h3 {
-      flex: 1;
-      color: var(--accent-gold-light);
-      font-family: "Playfair Display", serif;
-    }
-
-    .tool-category {
-      background: rgba(96, 81, 155, 0.1);
-      color: var(--accent-deep);
-      padding: 0.3rem 0.6rem;
-      border-radius: 12px;
-      font-size: 0.75rem;
-      font-weight: 600;
-    }
-
-    .tool-description {
-      color: var(--text-secondary);
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-
-    .tool-features {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .feature-tag {
-      background: rgba(96, 81, 155, 0.05);
-      color: var(--text-secondary);
-      padding: 0.3rem 0.6rem;
-      border-radius: 12px;
-      font-size: 0.75rem;
-      border: 1px solid var(--border-color);
-    }
-
-    .tool-link {
-      color: var(--accent-gold-light);
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: gap var(--dur-fast);
-    }
-
-    .tool-link:hover {
-      gap: 0.75rem;
-    }
-
-    /* Methods Grid */
-    .methods-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-    }
-
-    .method-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      transition: all var(--dur-med) var(--easing);
-    }
-
-    .method-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-      border-color: var(--accent-deep);
+      padding: 0;
     }
 
     .method-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 1rem;
-      gap: 1rem;
-    }
-
-    .method-header h3 {
-      color: var(--accent-gold-light);
-      font-family: "Playfair Display", serif;
-      flex: 1;
-    }
-
-    .profit-badge {
-      background: linear-gradient(135deg, var(--accent-deep), var(--accent-gold));
-      color: white;
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
-    .method-description {
-      color: var(--text-secondary);
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-
-    .method-tools {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    .method-advantages {
-      display: flex;
       flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .advantage-item {
-      display: flex;
       align-items: flex-start;
-      gap: 0.5rem;
-    }
-
-    .advantage-dot {
-      width: 6px;
-      height: 6px;
-      background: var(--accent-deep);
-      border-radius: 50%;
-      margin-top: 0.5rem;
-      flex-shrink: 0;
-    }
-
-    /* Video Container */
-    .video-container {
-      margin-bottom: 3rem;
-    }
-
-    .video-wrapper {
-      width: 100%;
-      max-width: 900px;
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .video-wrapper::before {
-      content: "";
-      display: block;
-      padding-top: 56.25%;
-    }
-
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    /* Conclusion Card */
-    .conclusion-card {
-      background: linear-gradient(135deg, rgba(96, 81, 155, 0.05), transparent);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius);
-      padding: 2.5rem;
-      text-align: center;
-    }
-
-    .conclusion-card h3 {
-      color: var(--accent-gold-light);
-      margin-bottom: 1.5rem;
-      font-family: "Playfair Display", serif;
-    }
-
-    .conclusion-card p {
-      color: var(--text-secondary);
-      line-height: 1.7;
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: 0 auto 2rem;
-    }
-
-    .conclusion-actions {
-      display: flex;
       gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .tools-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .methods-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .method-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      
-      .feature-highlights {
-        gap: 1rem;
-      }
-      
-      .tab-navigation {
-        gap: 0.5rem;
-      }
-      
-      .nav-tab {
-        padding: 0.6rem 1rem;
-        font-size: 0.8rem;
-      }
-      
-      .conclusion-card {
-        padding: 1.5rem;
-      }
-      
-      .seo-intro {
-        padding: 1.5rem;
-      }
-      
-      .animate-typing {
-        white-space: normal;
-        border-right: none;
-        animation: none;
-      }
+    .method-info {
+      align-items: center;
+      gap: 1rem;
     }
 
-    @media (max-width: 480px) {
-      .tool-card, .method-card {
-        padding: 1rem;
-      }
-      
-      .tool-header, .method-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-      }
-      
-      .conclusion-actions {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .seo-keywords {
-        gap: 0.5rem;
-      }
-      
-      .keyword-tag {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.8rem;
-      }
+    .video-showcase-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Tab pane visibility */
+  .tab-pane {
+    display: none;
+  }
+
+  .tab-pane.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .tool-card,
+    .method-item,
+    .category-block {
+      border-width: 2px;
     }
 
+    .tool-name,
+    .method-title,
+    .category-title {
+      color: var(--text-primary);
+    }
+  }
+</style>
 
-  </style>
+<script>
+/**
+ * AI VIDEO SECTION - ACCESSIBLE JAVASCRIPT
+ * Features: Keyboard navigation, collapsible sections, search/filter
+ */
+(function() {
+  'use strict';
 
-  <script>
-    // Tab functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      // Navigation tabs
-      const navTabs = document.querySelectorAll('.nav-tab');
-      const tabPanes = document.querySelectorAll('.tab-pane');
+  // CHANGE: Improved accessible tab navigation
+  const initTabs = function() {
+    const tabs = document.querySelectorAll('.ai-tab-btn');
+    const panes = document.querySelectorAll('.tab-pane');
+    
+    if (!tabs.length || !panes.length) return;
+
+    // Handle tab activation
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => activateTab(index));
       
-      navTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-          const targetTab = this.getAttribute('data-tab');
-          
-          // Update active tab
-          navTabs.forEach(t => t.classList.remove('active'));
-          this.classList.add('active');
-          
-          // Show target tab content
-          tabPanes.forEach(pane => {
-            pane.classList.remove('active');
-            if (pane.id === targetTab) {
-              pane.classList.add('active');
-            }
-          });
-          
-          // Re-trigger reveal animations for new content
-          setTimeout(() => {
-            initRevealOnce();
-          }, 100);
-        });
-      });
-      
-      // Category filters
-      const categoryFilters = document.querySelectorAll('.category-filter');
-      const toolCards = document.querySelectorAll('.tool-card');
-      
-      categoryFilters.forEach(filter => {
-        filter.addEventListener('click', function() {
-          const category = this.getAttribute('data-category');
-          
-          // Update active filter
-          categoryFilters.forEach(f => f.classList.remove('active'));
-          this.classList.add('active');
-          
-          // Filter tool cards
-          toolCards.forEach(card => {
-            if (category === 'all' || card.getAttribute('data-category') === category) {
-              card.style.display = 'block';
-              // Add animation for newly shown cards
-              card.classList.add('reveal');
-            } else {
-              card.style.display = 'none';
-            }
-          });
-        });
-      });
-      
-      // Internal link handlers for tabs
-      document.querySelectorAll('a[data-tab]').forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetTab = this.getAttribute('data-tab');
-          
-          // Find and click the corresponding tab
-          navTabs.forEach(tab => {
-            if (tab.getAttribute('data-tab') === targetTab) {
-              tab.click();
-            }
-          });
-        });
-      });
-      
-      // Add animation delays for staggered effects
-      document.querySelectorAll('.fade-in-stagger').forEach((el, index) => {
-        el.style.animationDelay = `${0.2 + (index * 0.1)}s`;
-      });
-      
-      // Add scroll-triggered animations
-      function initRevealOnce() {
-        const revealEls = document.querySelectorAll('.reveal:not(.visible)');
-        const revealObserver = new IntersectionObserver((entries, obs) => {
-          entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-              const el = entry.target;
-              setTimeout(() => el.classList.add('visible'), i * 50);
-              obs.unobserve(el);
-            }
-          });
-        }, { threshold: .12 });
+      // Keyboard navigation
+      tab.addEventListener('keydown', (e) => {
+        let newIndex = index;
         
-        revealEls.forEach(el => revealObserver.observe(el));
-      }
-      
-      initRevealOnce();
+        switch(e.key) {
+          case 'ArrowRight':
+            newIndex = (index + 1) % tabs.length;
+            break;
+          case 'ArrowLeft':
+            newIndex = (index - 1 + tabs.length) % tabs.length;
+            break;
+          case 'Home':
+            newIndex = 0;
+            break;
+          case 'End':
+            newIndex = tabs.length - 1;
+            break;
+          default:
+            return;
+        }
+        
+        e.preventDefault();
+        activateTab(newIndex);
+        tabs[newIndex].focus();
+      });
     });
-  </script>
-</section>
+
+    function activateTab(index) {
+      const targetId = tabs[index].getAttribute('data-target');
       
+      // Update tab attributes
+      tabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+        tab.setAttribute('aria-selected', i === index);
+        tab.setAttribute('tabindex', i === index ? '0' : '-1');
+      });
+      
+      // Update panes
+      panes.forEach(pane => {
+        pane.classList.toggle('active', pane.id === targetId);
+      });
+      
+      // Scroll slightly to show top of content on mobile
+      if (window.innerWidth < 768) {
+        document.querySelector('.ai-tabs-wrapper').scrollIntoView({behavior: 'smooth', block: 'nearest'});
+      }
+    }
+  };
+
+  // CHANGE: Collapsible category blocks
+  const initCategoryToggles = function() {
+    const toggles = document.querySelectorAll('.category-toggle');
+    
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        const content = toggle.nextElementSibling;
+        
+        toggle.setAttribute('aria-expanded', !isExpanded);
+        toggle.querySelector('.toggle-indicator').textContent = isExpanded ? '+' : '−';
+        content.hidden = isExpanded;
+      });
+    });
+  };
+
+  // CHANGE: Search/filter functionality
+  const initSearch = function() {
+    const searchInput = document.getElementById('tools-search');
+    const toolCards = document.querySelectorAll('.tool-card');
+    
+    if (!searchInput || !toolCards.length) return;
+
+    searchInput.addEventListener('input', (e) => {
+      const searchTerm = e.target.value.toLowerCase().trim();
+      
+      toolCards.forEach(card => {
+        const name = card.querySelector('.tool-name')?.textContent.toLowerCase() || '';
+        const desc = card.querySelector('.tool-desc')?.textContent.toLowerCase() || '';
+        const category = card.getAttribute('data-tool-category')?.toLowerCase() || '';
+        
+        const matches = name.includes(searchTerm) || 
+                       desc.includes(searchTerm) || 
+                       category.includes(searchTerm);
+        
+        card.style.display = matches ? 'flex' : 'none';
+      });
+    });
+  };
+
+  // CHANGE: Enhance details/summary with ARIA for better announcements
+  const initDetailsAnnouncement = function() {
+    const details = document.querySelectorAll('details[data-method]');
+    
+    details.forEach(detail => {
+      detail.addEventListener('toggle', () => {
+        if (detail.open) {
+          const title = detail.querySelector('.method-title')?.textContent;
+          if (title) {
+            // For screen readers
+            detail.setAttribute('aria-label', `${title} expanded`);
+          }
+        }
+      });
+    });
+  };
+
+  // Initialize all functionality
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      initTabs();
+      initCategoryToggles();
+      initSearch();
+      initDetailsAnnouncement();
+    });
+  } else {
+    initTabs();
+    initCategoryToggles();
+    initSearch();
+    initDetailsAnnouncement();
+  }
+})();
+</script>
+</section> 
+
+
 <style>
+
   /* Enhanced Styles for AI Video Section */
   .nav-tab {
     background: rgba(96, 81, 155, 0.1);
@@ -9889,6 +10447,7 @@ document.addEventListener('DOMContentLoaded', function() {
         justify-content: center;
       }
     }
+
   </style>
 
   <script>
